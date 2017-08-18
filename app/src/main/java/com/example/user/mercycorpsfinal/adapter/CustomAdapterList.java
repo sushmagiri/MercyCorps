@@ -70,6 +70,7 @@ public class CustomAdapterList extends RecyclerView.Adapter<CustomAdapterList.Cu
         }
 
         public void bind(final ListItem listItem, final OnItemClickListener listener) {
+
             tv_Org.setText(listItem.getOrgName());
             tv_Name.setText(listItem.getPerson());
             tv_phoneNo.setText(listItem.getPhoneNo());

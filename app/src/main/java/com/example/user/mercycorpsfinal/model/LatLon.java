@@ -6,27 +6,38 @@ import java.util.ArrayList;
 /**
  * Created by root on 7/25/17.
  */
-public class LatLon implements Serializable{
-    String name,location;
-    Double lat,lon;
+public class LatLon implements Serializable {
+    String gauze, river, location, basedOn;
+    Double lat, lon;
     ArrayList<Contact> contacts;
 
-   public LatLon(){}
+    public LatLon() {
+    }
 
-    public LatLon(String name, String location, Double lat, Double lon, ArrayList<Contact> contacts) {
-        this.name = name;
+    public LatLon(String location, String gauze, String river, String basedOn, Double lon, Double lat, ArrayList<Contact> contacts) {
+        this.gauze = gauze;
+        this.river = river;
         this.location = location;
+        this.basedOn = basedOn;
         this.lat = lat;
         this.lon = lon;
         this.contacts = contacts;
     }
 
-    public String getName() {
-        return name;
+    public String getGauze() {
+        return gauze;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setGauze(String gauze) {
+        this.gauze = gauze;
+    }
+
+    public String getRiver() {
+        return river;
+    }
+
+    public void setRiver(String river) {
+        this.river = river;
     }
 
     public String getLocation() {
@@ -35,6 +46,14 @@ public class LatLon implements Serializable{
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getBasedOn() {
+        return basedOn;
+    }
+
+    public void setBasedOn(String basedOn) {
+        this.basedOn = basedOn;
     }
 
     public Double getLat() {
@@ -59,5 +78,18 @@ public class LatLon implements Serializable{
 
     public void setContacts(ArrayList<Contact> contacts) {
         this.contacts = contacts;
+    }
+
+    @Override
+    public String toString() {
+        return "LatLon{" +
+                "gauze='" + gauze + '\'' +
+                ", river='" + river + '\'' +
+                ", location='" + location + '\'' +
+                ", basedOn='" + basedOn + '\'' +
+                ", lat=" + lat +
+                ", lon=" + lon +
+                ", contacts=" + contacts +
+                '}';
     }
 }
