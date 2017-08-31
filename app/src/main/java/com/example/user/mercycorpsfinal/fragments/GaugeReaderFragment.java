@@ -4,11 +4,11 @@ package com.example.user.mercycorpsfinal.fragments;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTabHost;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.user.mercycorpsfinal.R;
 import com.example.user.mercycorpsfinal.adapter.FragmentAdapter;
@@ -16,11 +16,10 @@ import com.example.user.mercycorpsfinal.adapter.FragmentAdapter;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EmergencyNumbers extends Fragment {
+public class GaugeReaderFragment extends Fragment {
 
-    FragmentTabHost mTabHost;
 
-    public EmergencyNumbers() {
+    public GaugeReaderFragment() {
         // Required empty public constructor
     }
 
@@ -42,11 +41,12 @@ public class EmergencyNumbers extends Fragment {
 
 
         FragmentAdapter adapter = new FragmentAdapter(getChildFragmentManager());
-        adapter.addFragment(new Sheet2Fragment(), "आपत्कालिन अवस्थामा");
-        adapter.addFragment(new Sheet3Fragment(), "अत्यन्त जरुरी फोन नम्व");
+        adapter.addFragment(new Sheet26Fragment(), "आपत्कालिन अवस्थामा");
+        adapter.addFragment(new Sheet27Fragment(), "बर्षा मापन केन्द्र");
         viewPager.setAdapter(adapter);
 
 
 
     }
+
 }

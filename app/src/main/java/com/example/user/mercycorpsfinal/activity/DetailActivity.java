@@ -34,28 +34,28 @@ public class DetailActivity extends AppCompatActivity {
         initializeViews();
         Intent intent=getIntent();
         listItem= (ListItem) intent.getSerializableExtra("data");
-        tvDetOrg.setText(listItem.getOrgName());
+        tvDetOrg.setText(listItem.getOrganization());
         tvDetPerson.setText(listItem.getPerson());
-        tvDetPhoneNo.setText(listItem.getMobNo());
-        tvDetMobNo.setText(listItem.getPhoneNo());
+        tvDetPhoneNo.setText(listItem.getMob());
+        tvDetMobNo.setText(listItem.getLandline());
         ImgBtnCallPh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                giveCall(listItem.getMobNo());
+                giveCall(listItem.getMob());
             }
         });
 
         ImgCallBtnMob.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                giveCalllTo(listItem.getPhoneNo());
+                giveCalllTo(listItem.getLandline());
             }
         });
 
         ImgCallBtnMsgPh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sendMessage(listItem.getPhoneNo());
+                sendMessage(listItem.getLandline());
             }
         });
 

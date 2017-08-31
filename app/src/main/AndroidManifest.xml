@@ -7,7 +7,7 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -46,7 +46,27 @@
             android:name=".activity.DetailActivity"
             android:label="" />
         <activity android:name=".RajnaitikDal" />
-        <activity android:name=".activity.CommunicationChannel"></activity>
+        <activity android:name=".activity.CommunicationChannel" />
+        <activity android:name=".activity.ApatkalinAwasthaActivity" />
+        <activity android:name=".activity.GairSarkariSasthaActivity" />
+        <activity android:name=".activity.SuchanaBewasthapan5Activity" />
+        <activity android:name=".activity.Sheet3" />
+        <activity android:name=".activity.Sheet6" />
+        <activity android:name=".activity.Sheet7" />
+        <activity android:name=".activity.Sheet8" />
+        <activity android:name=".activity.Sheet9" />
+        <activity android:name=".activity.Sheet10" />
+        <activity android:name=".activity.Sheet11" />
+        <activity android:name=".activity.Sheet12" />
+        <activity android:name=".activity.Sheet13" />
+        <activity android:name=".activity.Sheet14" />
+        <activity android:name=".activity.Sheet15" />
+        <activity android:name=".activity.Sheet16" />
+        <activity android:name=".activity.Sheet17" />
+        <activity android:name=".activity.Sheet18" />
+        <activity android:name=".activity.Sheet19" />
+        <activity android:name=".activity.Sheet20" />
+        <activity android:name=".activity.Sheet21"></activity>
     </application>
 
 </manifest>

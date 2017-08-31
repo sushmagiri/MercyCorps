@@ -17,9 +17,11 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.user.mercycorpsfinal.activity.CommunicationChannel;
+import com.example.user.mercycorpsfinal.fragments.ClusterFragment;
 import com.example.user.mercycorpsfinal.fragments.DHMFragment;
 import com.example.user.mercycorpsfinal.fragments.EmergencyNumbers;
-import com.example.user.mercycorpsfinal.fragments.ImportantContactsFragment;
+import com.example.user.mercycorpsfinal.fragments.GaugeReaderFragment;
+import com.example.user.mercycorpsfinal.fragments.EWSResponse;
 import com.example.user.mercycorpsfinal.fragments.MapFragment;
 
 import java.util.ArrayList;
@@ -91,9 +93,11 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new MapFragment(), "Map");
-        adapter.addFragment(new ImportantContactsFragment(), "विषय सूची ");
+        adapter.addFragment(new EWSResponse(), "EWS Response");
         adapter.addFragment(new DHMFragment(),"DHM");
         adapter.addFragment(new EmergencyNumbers(),"Emergency Numbers");
+        adapter.addFragment(new ClusterFragment(),"Clusters");
+        adapter.addFragment(new GaugeReaderFragment(),"Gauge Reader");
         viewPager.setAdapter(adapter);
     }
 }

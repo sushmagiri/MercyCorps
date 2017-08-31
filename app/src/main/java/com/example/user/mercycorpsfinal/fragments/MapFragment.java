@@ -25,9 +25,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.maps.android.data.Feature;
-import com.google.maps.android.data.geojson.GeoJsonLayer;
-import com.google.maps.android.data.kml.KmlLayer;
+
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -46,7 +44,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
     ArrayList<LatLon> latLons;
     ArrayList<Contact> contacts;
     Contact contact;
-    KmlLayer layer;
+//    KmlLayer layer;
 
     public MapFragment() {
         // Required empty public constructor
@@ -83,14 +81,14 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
         mgoogleMap = googleMap;
         mgoogleMap.setInfoWindowAdapter(new CustomInfoWindowAdapter(LayoutInflater.from(getContext())));
 
-        try {
-            layer = new KmlLayer(mgoogleMap, R.raw.majorriver, this.getContext());
-            layer.addLayerToMap();
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            layer = new KmlLayer(mgoogleMap, R.raw.majorriver, this.getContext());
+//            layer.addLayerToMap();
+//        } catch (XmlPullParserException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
        /* int i=0;
         for (KmlPlacemark placemark : layer.getPlacemarks()) {
             // Do something to Placemark
@@ -108,15 +106,15 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, GoogleM
                 System.out.println(container.getProperty("name"));
             }
         }*/
-        layer.setOnFeatureClickListener(new GeoJsonLayer.GeoJsonOnFeatureClickListener() {
-            @Override
-            public void onFeatureClick(Feature feature) {
-                Log.e(TAG, "onFeatureClick: "+feature.getProperty("name") );
-                Toast.makeText(getContext(), ""+feature.getProperty("name"), Toast.LENGTH_SHORT).show();
-               
-
-            }
-        });
+//        layer.setOnFeatureClickListener(new GeoJsonLayer.GeoJsonOnFeatureClickListener() {
+//            @Override
+//            public void onFeatureClick(Feature feature) {
+//                Log.e(TAG, "onFeatureClick: "+feature.getProperty("name") );
+//                Toast.makeText(getContext(), ""+feature.getProperty("name"), Toast.LENGTH_SHORT).show();
+//
+//
+//            }
+//        });
 
 
         //Data prepare

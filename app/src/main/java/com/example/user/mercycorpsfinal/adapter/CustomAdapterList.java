@@ -1,19 +1,23 @@
 package com.example.user.mercycorpsfinal.adapter;
 
+import android.content.Context;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.user.mercycorpsfinal.R;
+import com.example.user.mercycorpsfinal.database.DatabaseHelper;
 import com.example.user.mercycorpsfinal.model.ListItem;
 
 import java.util.List;
 
 public class CustomAdapterList extends RecyclerView.Adapter<CustomAdapterList.CustomViewHolder> {
-    List<ListItem> entityArrayList;
+  private   List<ListItem> entityArrayList;
+
     private final OnItemClickListener listener;
 
     public interface OnItemClickListener {
@@ -36,6 +40,8 @@ public class CustomAdapterList extends RecyclerView.Adapter<CustomAdapterList.Cu
     public CustomAdapterList(List<ListItem> entityArrayList, OnItemClickListener listener) {
         this.entityArrayList = entityArrayList;
         this.listener = listener;
+
+
     }
 
     @Override
@@ -71,10 +77,15 @@ public class CustomAdapterList extends RecyclerView.Adapter<CustomAdapterList.Cu
 
         public void bind(final ListItem listItem, final OnItemClickListener listener) {
 
-            tv_Org.setText(listItem.getOrgName());
-            tv_Name.setText(listItem.getPerson());
-            tv_phoneNo.setText(listItem.getPhoneNo());
-            tv_mobNo.setText(listItem.getMobNo());
+                    tv_mobNo.setVisibility(View.VISIBLE);
+                    tv_Name.setVisibility(View.VISIBLE);
+                    tv_phoneNo.setVisibility(View.VISIBLE);
+                    tv_Org.setVisibility(View.VISIBLE);
+                    tv_Org.setText(listItem.getOrganization());
+                    tv_Name.setText(listItem.getPerson());
+                    tv_phoneNo.setText(listItem.getLandline());
+                    tv_mobNo.setText(listItem.getMob());
+
 
 
 
@@ -84,8 +95,9 @@ public class CustomAdapterList extends RecyclerView.Adapter<CustomAdapterList.Cu
                     listener.onItemClick(listItem);
                 }
             });
-        }
+
     }
+        }
 
 
 }

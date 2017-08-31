@@ -33,14 +33,14 @@ public class RajnaitikDal extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        adapter = new CustomAdapterList(entityArrayList, new CustomAdapterList.OnItemClickListener() {
-            @Override
-            public void onItemClick(ListItem item) {
-                Intent i=new Intent(getApplicationContext(),DetailActivity.class);
-                i.putExtra("data",(Serializable)item);
-                startActivity(i);
-            }
-        });
+//        adapter = new CustomAdapterList(entityArrayList, new CustomAdapterList.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(ListItem item) {
+//                Intent i=new Intent(getApplicationContext(),DetailActivity.class);
+//                i.putExtra("data",(Serializable)item);
+//                startActivity(i);
+//            }
+//        },);
         LinearLayoutManager verticalLayoutmanager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         rv.setLayoutManager(verticalLayoutmanager);
         rv.setItemAnimator(new DefaultItemAnimator());
